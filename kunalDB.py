@@ -39,6 +39,25 @@ def trans(string):
             return string
     return eval(string)
 
+def createTableStruct():
+    """ Assists with assigning field names to table. """
+    obj = dataClass()
+    while True:
+        field = obj.enter("Enter Field Name: ", True)
+        if field.isidentifier():
+            pass  # Valid field name, already added by enter()
+        elif field == "":
+            break  # Stop on empty input
+        else:
+            print("*** INVALID FIELD NAME!! ***")
+    with open(db_filename, "ab") as f:
+        pickle.dump(obj, f)
+    print("\nNOW YOU ARE ALL SET...\n")
+
+def getFieldNames():
+    """ Placeholder for getting field names from the DB file. """
+    pass
+
 
 def main():
     while True:
