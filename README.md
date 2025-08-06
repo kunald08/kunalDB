@@ -1,7 +1,7 @@
 
 ## 📸 First take a look at demo then read the README
 
-> 📦 Add a screenshot of your terminal displaying records and graph
+> 📦![Demo GIF](./assets/demo.gif)
 
 # 🗃️ KunalDB
 
