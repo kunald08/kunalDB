@@ -55,16 +55,25 @@ def typeOf(dataStr):
 
 		return "num"
 
+# def trans(string):
+
+# 	""" Transforms string to number."""
+
+# 	for a in string:
+# 		if not (a.isdigit() or a == "." or a == "-"):
+# 			# If not a number
+# 			return string
+
+# 	return eval(string)
 def trans(string):
-
-	""" Transforms string to number."""
-
-	for a in string:
-		if not (a.isdigit() or a == "." or a == "-"):
-			# If not a number
-			return string
-
-	return eval(string)
+    """ Transforms string to number."""
+    if isinstance(string, (int, float)):
+        return string
+    for a in string:
+        if not (a.isdigit() or a == "." or a == "-"):
+            # If not a number
+            return string
+    return eval(string)
 
 def createTableStruct():
 
