@@ -102,7 +102,7 @@ Made with ❤️ for CLI nerds
 
 ## ⚖️ License
 
-MIT License © 2025 Kunal Dharpure
+[MIT License](LICENSE) © 2025 Kunal Dharpure
 
 ---
 
