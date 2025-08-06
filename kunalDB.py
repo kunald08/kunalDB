@@ -8,6 +8,38 @@ try:
 except ImportError:
     pass
 
+# -------- Definitions --------
+
+class dataClass(object):
+    def __init__(self):
+        self.data = []
+
+    def enter(self, inputLine="> ", isFieldName=False):
+        if not isFieldName:
+            inp = trans(input(inputLine))
+            self.data.append(inp)
+        else:
+            inp = input(inputLine)
+            if inp.isidentifier():
+                self.data.append(inp)
+        return inp
+
+def typeOf(dataStr):
+    """ Returns type of the data passed."""
+    for a in dataStr:
+        if not (a.isdigit() or a == "." or a == "-"):
+            return "str"
+    if dataStr.count(".") <= 1:
+        return "num"
+
+def trans(string):
+    """ Transforms string to number."""
+    for a in string:
+        if not (a.isdigit() or a == "." or a == "-"):
+            return string
+    return eval(string)
+
+
 def main():
     while True:
         print("""
